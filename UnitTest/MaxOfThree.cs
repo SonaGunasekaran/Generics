@@ -6,7 +6,7 @@ namespace UnitTest
 {
     class MaxOfThree
     {
-        public int FindMax(int num1, int num2, int num3)
+        public float FindMax(float num1, float num2, float num3)
         {
             if (num1.CompareTo(num2) > 0 && num1.CompareTo(num3) > 0)
             {
