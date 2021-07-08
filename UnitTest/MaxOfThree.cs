@@ -6,26 +6,26 @@ namespace UnitTest
 {
     class MaxOfThree
     {
-        public float FindMax(float num1, float num2, float num3)
+        public string FindMax(string str1, string str2, string str3)
         {
-            if (num1.CompareTo(num2) > 0 && num1.CompareTo(num3) > 0)
+            if (str1.CompareTo(str2) > 0 && str1.CompareTo(str3) > 0)
             {
-                return num1;
+                return str1;
 
             }
-            else if (num2.CompareTo(num1) > 0 && num2.CompareTo(num3) > 0)
+            else if (str2.CompareTo(str1) > 0 && str2.CompareTo(str3) > 0)
             {
-                return num2;
+                return str2;
             }
-            else if (num3.CompareTo(num1) > 0 && num3.CompareTo(num2) > 0)
+            else if (str3.CompareTo(str1) > 0 && str3.CompareTo(str2) > 0)
             {
 
-                return num3;
+                return str3;
             }
             else
             {
-                Console.WriteLine("All are having same number");
-                return 0;
+                Console.WriteLine("All are same");
+                return " ";
             }
 
         }
