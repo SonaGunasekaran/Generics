@@ -6,7 +6,7 @@ namespace Generics
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Welcome to generics Programming");
+            Console.WriteLine("Welcome to Generics Program");
         }
     }
 }
