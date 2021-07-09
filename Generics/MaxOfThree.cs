@@ -9,46 +9,27 @@ namespace Generics
         public class MaxOfThree<T> where T : IComparable
         {
         //Generic Method
-            public T first, second, third;
-            public MaxOfThree(T first, T second, T third)
+            public T[] inputArray;
+            public MaxOfThree(T[]inputArray)
             {
-               this.first = first;
-               this.second = second;
-               this.third = third;
+               this.inputArray = inputArray;
             }
-            public static T FindMax(T first, T second, T third)
-            {
-                //Comparing first value with second and third 
-                if (first.CompareTo(second) > 0 && first.CompareTo(third) > 0)
-                {
-                    return first;
-
-                }
-                //Comparing second value with first and third
-                else if (second.CompareTo(first) > 0 && second.CompareTo(third) > 0)
-                {
-                    return second;
-                }
-                //comparing third value with first and second
-                else if (third.CompareTo(first) > 0 && third.CompareTo(second) > 0)
-                {
-
-                    return third;
-                }
-                else
-                {
-                    Console.WriteLine("All are same");
-                    return default;
-                }
-
             
+            public static T[] SortArray(T[]inputArray)
+            {
+                Array.Sort(inputArray);
+                return inputArray;
             }
-                public T MaxMethod()
-                {
-                  T max = MaxOfThree<T>.FindMax(this.first, this.second, this.third);
-               
+            public static T FindMax(T[]inputArray)
+            {
+                 var sortedValues = SortArray(inputArray);
+                 return sortedValues[sortedValues.Length - 1];
+            }
+            public T MaxMethod()
+            {
+                  T max = MaxOfThree<T>.FindMax(this.inputArray);
                   return max;
-                }
+            }
 
         }
 }

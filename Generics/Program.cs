@@ -7,6 +7,7 @@ namespace Generics
         static void Main(string[] args)
         {
             Console.WriteLine("Welcome to Generic Problems");
+            
         }
     }
 }
