@@ -4,9 +4,10 @@ namespace Generics
 {
     class Program
     {
-        static void Main()
+        static void Main(string[] args)
         {
-            Console.WriteLine("Welcome to Generics Program");
+            Console.WriteLine("Welcome to Generic Problems");
+            
         }
     }
 }
