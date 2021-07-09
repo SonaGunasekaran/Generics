@@ -4,28 +4,33 @@ using System.Text;
 
 namespace UnitTest
 {
-    class MaxOfThree
+    //Generic Class 
+    public class MaxOfThree <T> where T : IComparable
     {
-        public string FindMax(string str1, string str2, string str3)
+        //Generic Method
+        public static T FindMax(T first, T second, T third)
         {
-            if (str1.CompareTo(str2) > 0 && str1.CompareTo(str3) > 0)
+            //Comparing first value with second and third 
+            if (first.CompareTo(second) > 0 && first.CompareTo(third) > 0)
             {
-                return str1;
+                return first;
 
             }
-            else if (str2.CompareTo(str1) > 0 && str2.CompareTo(str3) > 0)
+            //Comparing second value with first and third
+            else if (second.CompareTo(first) > 0 && second.CompareTo(third) > 0)
             {
-                return str2;
+                return second;
             }
-            else if (str3.CompareTo(str1) > 0 && str3.CompareTo(str2) > 0)
+            //comparing third value with first and second
+            else if (third.CompareTo(first) > 0 && third.CompareTo(second) > 0)
             {
 
-                return str3;
+                return third;
             }
             else
             {
                 Console.WriteLine("All are same");
-                return " ";
+                return default;
             }
 
         }
